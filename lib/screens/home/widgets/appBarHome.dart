@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_twitter_app/utils/templateColor.dart';
 
 class AppBarHome extends StatelessWidget with PreferredSizeWidget {
   const AppBarHome({super.key, required this.scaffoldKey});
@@ -9,7 +10,7 @@ class AppBarHome extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: const Color.fromARGB(104, 0, 0, 0),
+      backgroundColor: TemplateColor.dark,
       leading: IconButton(
           onPressed: () {
             scaffoldKey.currentState?.openDrawer();
@@ -19,9 +20,9 @@ class AppBarHome extends StatelessWidget with PreferredSizeWidget {
                   'https://avatars.githubusercontent.com/u/67165182?v=4'))),
       title: IconButton(
           onPressed: () => print(""),
-          icon: const FaIcon(
+          icon: FaIcon(
             FontAwesomeIcons.twitter,
-            color: Color.fromARGB(255, 28, 155, 240),
+            color: TemplateColor.twitter,
           )),
       centerTitle: true,
       actions: [

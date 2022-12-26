@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_twitter_app/screens/home/widgets/menuContent.dart';
 import 'package:my_twitter_app/screens/profile/profile.dart';
+import 'package:my_twitter_app/utils/templateColor.dart';
 
 class DrawerList extends StatelessWidget {
   const DrawerList({Key? key}) : super(key: key);
@@ -9,95 +10,95 @@ class DrawerList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       width: MediaQuery.of(context).size.width * .85,
-      backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+      backgroundColor: TemplateColor.dark,
       child: ListView(
         padding: EdgeInsets.zero,
-        children: const [
+        children: [
           SizedBox(
             height: 60,
             child: DrawerHeader(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 0, 0, 0),
+                color: TemplateColor.dark,
               ),
               child: Text(
                 'menu',
                 style: TextStyle(
-                  color: Colors.white,
+                  color: TemplateColor.title,
                   fontSize: 24,
                 ),
               ),
             ),
           ),
-          MenuContent(
+          const MenuContent(
             leadingContent: CircleAvatar(
                 backgroundImage: NetworkImage(
                     'https://avatars.githubusercontent.com/u/67165182?v=4')),
             trailingContent: Icon(Icons.person_add_alt_outlined),
             route: ProfilePage(),
           ),
-          MenuContent(
+          const MenuContent(
             titleContent: 'Marina Vandenbosch',
             route: ProfilePage(),
             fontSizeContent: 18,
             subtitleContent: '@MarinaVANDENBO6',
           ),
-          MenuContent(
+          const MenuContent(
             titleContent: '203 Abonnement    77 Abonnés',
             route: ProfilePage(),
             fontSizeContent: 14,
           ),
-          MenuContent(
+          const MenuContent(
             leadingContent: Icon(Icons.person),
             titleContent: 'Profil',
             route: ProfilePage(),
             fontSizeContent: 18,
           ),
-          MenuContent(
+          const MenuContent(
             leadingContent: Icon(Icons.messenger_outline_rounded),
             titleContent: 'Sujets',
             route: ProfilePage(),
             fontSizeContent: 18,
           ),
-          MenuContent(
+          const MenuContent(
             leadingContent: Icon(Icons.bookmark_border),
             titleContent: 'Signets',
             route: ProfilePage(),
             fontSizeContent: 18,
           ),
-          MenuContent(
+          const MenuContent(
             leadingContent: Icon(Icons.library_books_outlined),
             titleContent: 'Liste',
             route: ProfilePage(),
             fontSizeContent: 18,
           ),
-          MenuContent(
+          const MenuContent(
             leadingContent: Icon(Icons.person_pin_circle_outlined),
             titleContent: 'Cercle Twitter',
             route: ProfilePage(),
             fontSizeContent: 18,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Divider(
-            color: Colors.white30,
+            color: TemplateColor.divider,
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          MenuContent(
+          const MenuContent(
             titleContent: 'Creator Studio',
             route: ProfilePage(),
             fontSizeContent: 16,
             trailingContent: Icon(Icons.keyboard_arrow_down_sharp),
           ),
-          MenuContent(
+          const MenuContent(
             titleContent: 'Outils professionnels',
             route: ProfilePage(),
             fontSizeContent: 16,
             trailingContent: Icon(Icons.keyboard_arrow_down_sharp),
           ),
-          MenuContent(
+          const MenuContent(
             titleContent: 'Réglages et support',
             route: ProfilePage(),
             fontSizeContent: 16,

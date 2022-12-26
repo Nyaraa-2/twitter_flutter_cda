@@ -1,5 +1,6 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
+import 'package:my_twitter_app/utils/templateColor.dart';
 
 class MenuContent extends StatelessWidget {
   const MenuContent({
@@ -27,14 +28,14 @@ class MenuContent extends StatelessWidget {
           ? Text(
               titleContent!,
               style: TextStyle(
-                color: Colors.white,
+                color: TemplateColor.title,
                 fontSize: fontSizeContent,
               ),
             )
           : null,
       subtitle: subtitleContent != null
           ? Text(subtitleContent!,
-              style: const TextStyle(color: Color.fromARGB(255, 136, 136, 136)))
+              style: TextStyle(color: TemplateColor.subtitle))
           : null,
       onTap: () => Navigator.push(
           context,

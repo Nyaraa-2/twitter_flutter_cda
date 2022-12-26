@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_twitter_app/utils/templateColor.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -6,9 +7,9 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(156, 0, 0, 0),
+        backgroundColor: TemplateColor.dark,
         appBar: AppBar(
-          backgroundColor: const Color.fromARGB(156, 0, 0, 0),
+          backgroundColor: TemplateColor.dark,
           leading: IconButton(
               onPressed: () => Navigator.pop(context),
               icon: const Icon(Icons.arrow_back)),
