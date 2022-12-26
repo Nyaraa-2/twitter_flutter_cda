@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:my_twitter_app/screens/home/widgets/appBarHome.dart';
 import 'package:my_twitter_app/screens/home/widgets/drawer.dart';
